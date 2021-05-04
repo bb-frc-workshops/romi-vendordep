@@ -66,32 +66,32 @@ model {
         }
       }
       binaries.all {
-        lib library: 'VendorDriver', linkage: 'shared'
+        // lib library: 'VendorDriver', linkage: 'shared'
       }
       nativeUtils.useRequiredLibrary(it, 'wpilib_shared')
     }
 
-    VendorDriver(JniNativeLibrarySpec) {
-      enableCheckTask true
-      javaCompileTasks << compileJava
-      jniCrossCompileOptions << JniCrossCompileOptions(nativeUtils.wpi.platforms.roborio)
-      // Leave these for future proofing
-      jniCrossCompileOptions << JniCrossCompileOptions(nativeUtils.wpi.platforms.raspbian)
-      jniCrossCompileOptions << JniCrossCompileOptions(nativeUtils.wpi.platforms.aarch64bionic)
-      sources {
-        cpp {
-          source {
-            srcDirs 'src/main/driver/cpp'
-            include '**/*.cpp'
-          }
-          exportedHeaders {
-            srcDirs 'src/main/driver/include'
-          }
-        }
-      }
+    // VendorDriver(JniNativeLibrarySpec) {
+    //   enableCheckTask true
+    //   javaCompileTasks << compileJava
+    //   jniCrossCompileOptions << JniCrossCompileOptions(nativeUtils.wpi.platforms.roborio)
+    //   // Leave these for future proofing
+    //   jniCrossCompileOptions << JniCrossCompileOptions(nativeUtils.wpi.platforms.raspbian)
+    //   jniCrossCompileOptions << JniCrossCompileOptions(nativeUtils.wpi.platforms.aarch64bionic)
+    //   sources {
+    //     cpp {
+    //       source {
+    //         srcDirs 'src/main/driver/cpp'
+    //         include '**/*.cpp'
+    //       }
+    //       exportedHeaders {
+    //         srcDirs 'src/main/driver/include'
+    //       }
+    //     }
+    //   }
 
-      nativeUtils.useRequiredLibrary(it, "driver_shared")
-    }
+    //   nativeUtils.useRequiredLibrary(it, "driver_shared")
+    // }
   }
   testSuites {
     VendorTest {
@@ -103,22 +103,22 @@ model {
         }
 
         binaries.all {
-          lib library: 'VendorDriver', linkage: 'shared'
+          // lib library: 'VendorDriver', linkage: 'shared'
         }
 
         nativeUtils.useRequiredLibrary(it, "wpilib_executable_shared", "googletest_static")
     }
 
-    VendorDriverTest {
-        sources.cpp {
-            source {
-                srcDir 'src/test/driver/cpp'
-                include '**/*.cpp'
-            }
-        }
+    // VendorDriverTest {
+    //     sources.cpp {
+    //         source {
+    //             srcDir 'src/test/driver/cpp'
+    //             include '**/*.cpp'
+    //         }
+    //     }
 
-        nativeUtils.useRequiredLibrary(it, "wpilib_executable_shared", "googletest_static")
-    }
+    //     nativeUtils.useRequiredLibrary(it, "wpilib_executable_shared", "googletest_static")
+    // }
   }
 }
 
