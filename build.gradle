@@ -40,12 +40,12 @@ dependencies {
 nativeUtils {
   exportsConfigs {
     // Main library is just default empty. This will export everything
-    Vendor {
+    Romi {
     }
   }
   privateExportsConfigs {
     // Only export explicit symbols from driver library
-    VendorDriver {
+    RomiDriver {
       exportsFile = project.file("src/main/driver/symbols.txt")
     }
   }
@@ -53,7 +53,7 @@ nativeUtils {
 
 model {
   components {
-    Vendor(NativeLibrarySpec) {
+    Romi(NativeLibrarySpec) {
       sources {
         cpp {
           source {
@@ -94,7 +94,7 @@ model {
     // }
   }
   testSuites {
-    VendorTest {
+    RomiTest {
         sources.cpp {
             source {
                 srcDir 'src/test/native/cpp'
