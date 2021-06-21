@@ -7,9 +7,9 @@ package edu.wpi.first.wpilibj.romi;
 import edu.wpi.first.hal.SimDevice;
 import edu.wpi.first.hal.SimDevice.Direction;
 import edu.wpi.first.hal.SimDouble;
-import edu.wpi.first.wpilibj.GyroBase;
+import edu.wpi.first.wpilibj.interfaces.Gyro;
 
-public class RomiGyro extends GyroBase {
+public class RomiGyro implements Gyro {
   private final SimDevice m_simDevice;
   private SimDouble m_simRateX;
   private SimDouble m_simRateY;

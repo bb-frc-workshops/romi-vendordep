@@ -6,8 +6,8 @@
 
 using namespace frc;
 
-RomiMotor::RomiMotor(int channel) : PWMSpeedController(channel) {
-  SetPeriodMultiplier(kPeriodMultiplier_1X);
-  SetSpeed(0.0);
-  SetZeroLatch();
+RomiMotor::RomiMotor(int channel) : PWMMotorController("Romi Motor", channel) {
+  m_pwm.SetPeriodMultiplier(PWM::kPeriodMultiplier_1X);
+  m_pwm.SetSpeed(0.0);
+  m_pwm.SetZeroLatch();
 }

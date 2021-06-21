@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "frc/PWMSpeedController.h"
+#include <frc/motorcontrol/PWMMotorController.h>
 
 namespace frc {
 
@@ -13,8 +13,8 @@ namespace frc {
  *
  * A general use PWM motor controller representing the motors on a Romi robot
  */
-class RomiMotor : public PWMSpeedController {
- public:
+class RomiMotor : public PWMMotorController {
+public:
   /**
    * Constructor for a RomiMotor.
    *
@@ -27,4 +27,4 @@ class RomiMotor : public PWMSpeedController {
   RomiMotor& operator=(RomiMotor&&) = default;
 };
 
-}  // namespace frc
+} // namespace frc

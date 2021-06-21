@@ -24,13 +24,9 @@ RomiGyro::RomiGyro() : m_simDevice("Gyro:RomiGyro") {
   }
 }
 
-double RomiGyro::GetAngle() const {
-  return GetAngleZ();
-}
+double RomiGyro::GetAngle() const { return GetAngleZ(); }
 
-double RomiGyro::GetRate() const {
-  return GetRateZ();
-}
+double RomiGyro::GetRate() const { return GetRateZ(); }
 
 double RomiGyro::GetRateX() const {
   if (m_simRateX) {
