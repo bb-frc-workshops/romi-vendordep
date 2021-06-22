@@ -23,7 +23,7 @@ namespace frc {
  * DIO 3 - Yellow LED (output only)
  */
 class OnBoardIO {
- public:
+public:
   enum ChannelMode { INPUT, OUTPUT };
   OnBoardIO(OnBoardIO::ChannelMode dio1, OnBoardIO::ChannelMode dio2);
 
@@ -60,7 +60,7 @@ class OnBoardIO {
    */
   void SetYellowLed(bool value);
 
- private:
+private:
   frc::DigitalInput m_buttonA{0};
   frc::DigitalOutput m_yellowLed{3};
 
@@ -73,4 +73,4 @@ class OnBoardIO {
   std::unique_ptr<frc::DigitalOutput> m_redLed;
 };
 
-}  // namespace frc
+} // namespace frc

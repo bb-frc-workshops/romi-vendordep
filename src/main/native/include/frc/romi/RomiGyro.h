@@ -5,7 +5,8 @@
 #pragma once
 
 #include <hal/SimDevice.h>
-#include <frc/GyroBase.h>
+
+#include <frc/interfaces/Gyro.h>
 
 namespace frc {
 
@@ -15,8 +16,8 @@ namespace frc {
  * This class is for the Romi onboard gyro, and will only work in
  * simulation/Romi mode. Only one instance of a RomiGyro is supported.
  */
-class RomiGyro : public GyroBase {
- public:
+class RomiGyro : public Gyro {
+public:
   RomiGyro();
 
   /**
@@ -83,7 +84,7 @@ class RomiGyro : public GyroBase {
    */
   void Reset() override;
 
- private:
+private:
   hal::SimDevice m_simDevice;
   hal::SimDouble m_simRateX;
   hal::SimDouble m_simRateY;
@@ -97,4 +98,4 @@ class RomiGyro : public GyroBase {
   double m_angleZOffset = 0;
 };
 
-}  // namespace frc
+} // namespace frc

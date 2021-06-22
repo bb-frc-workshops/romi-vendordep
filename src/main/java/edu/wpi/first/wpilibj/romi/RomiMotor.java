@@ -4,20 +4,20 @@
 
 package edu.wpi.first.wpilibj.romi;
 
-import edu.wpi.first.hal.HAL;
-import edu.wpi.first.wpilibj.PWMSpeedController;
+import edu.wpi.first.wpilibj.PWM;
+import edu.wpi.first.wpilibj.motorcontrol.PWMMotorController;
 
 /**
  * RomiMotor
  *
  * A general use PWM motor controller representing the motors on a Romi robot
  */
-public class RomiMotor extends PWMSpeedController {
+public class RomiMotor extends PWMMotorController {
   /** Common initialization code called by all constructors. */
   protected void initRomiMotor() {
-    setPeriodMultiplier(PeriodMultiplier.k1X);
-    setSpeed(0.0);
-    setZeroLatch();
+    m_pwm.setPeriodMultiplier(PWM.PeriodMultiplier.k1X);
+    m_pwm.setSpeed(0.0);
+    m_pwm.setZeroLatch();
   }
 
   /**
@@ -27,7 +27,7 @@ public class RomiMotor extends PWMSpeedController {
    *     0 is the left motor, 1 is the right.
    */
   public RomiMotor(final int channel) {
-    super(channel);
+    super("Romi Motor", channel);
     initRomiMotor();
   }
 }
