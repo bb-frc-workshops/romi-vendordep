@@ -9,7 +9,7 @@
         {
             "groupId": "edu.wpi.first.romi",
             "artifactId": "romi-vendordep-java",
-            "version": "wpilib"
+            "version": "0.0.2"
         }
     ],
     "jniDependencies": [],
@@ -17,7 +17,7 @@
         {
             "groupId": "edu.wpi.first.romi",
             "artifactId": "romi-vendordep-cpp",
-            "version": "wpilib",
+            "version": "0.0.2",
             "libName": "romiVendordep",
             "headerClassifier": "headers",
             "sourcesClassifier": "sources",
