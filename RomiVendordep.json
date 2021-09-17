@@ -1,7 +1,7 @@
 {
     "fileName": "RomiVendordep.json",
     "name": "Romi-Vendordep",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "uuid": "2854af28-a682-4c3e-abe5-1f62c288c6b8",
     "mavenUrls": [],
     "jsonUrl": "",
@@ -9,7 +9,7 @@
         {
             "groupId": "edu.wpi.first.romi",
             "artifactId": "romi-vendordep-java",
-            "version": "0.0.2"
+            "version": "0.0.3"
         }
     ],
     "jniDependencies": [],
@@ -17,7 +17,7 @@
         {
             "groupId": "edu.wpi.first.romi",
             "artifactId": "romi-vendordep-cpp",
-            "version": "0.0.2",
+            "version": "0.0.3",
             "libName": "romiVendordep",
             "headerClassifier": "headers",
             "sourcesClassifier": "sources",
